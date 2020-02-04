@@ -1,0 +1,64 @@
+Arianna Kan
+HW3
+Written Questions
+
+Q1. HeapSort Empirical Evaluation 
+---------------------------------
+Result:
+N  MaxComp MaxExch
+16	  26	14
+32	  56	26
+64	  117	51
+128	  241	102
+256	  484	202
+512	  979	401
+
+Prop R: Sink-based heap construction uses fewer than 2N compares and fewer than N
+exchanges to construct a heap from N items. 
+
+Do your empirical results support this proposition?
+YES, as can be seen from my empirical results, MaxComp is less than 2*N and MaxExch
+is less than N for each N
+  
+
+Q2. Recurrence Relationship
+---------------------------
+
+Determine C(N) for BinaryArraySearch and determine the upper bound (worst case)
+and the lower bound (best case).
+
+C(N) = C(N/2) + 1					C(N/2) = C(N/4) + 1
+C(N) = C(N/4) + 1 + 1				C(1) = 1
+C(N) = C(N/8) + 1 + 1 + 1			2^k = N --> stop when k = logN
+C(N) = C(N/(2^k) + k
+C(N) = C(N/N) + logN
+C(N) = 1 + logN
+Running time: O(logN)
+
+Lower Bound (best case): O(1), when the element you are searching for is in the exact middle,
+and you can finish in constant time.
+
+Upper Bound (worst case): O(logN), when you have to recursively search for the element
+
+Q3. Sorted Linked Lists (25 pts)
+--------------------------------
+
+Report on the timing difference between your run and the example from Day 12.
+
+Answer: There is no timing difference. The moral of this example is to show that
+you shouldn't sort a hashtable, because it takes up a lot of time to re-sort
+the hashtable each time it is resized. 
+   
+Q4. Binary Search Tree (45 pts)
+-------------------------------
+
+Submit your code for BST
+
+BONUS QUESTIONS
+
+None yet, but I hope to add a few this week.
+
+
+
+
+
